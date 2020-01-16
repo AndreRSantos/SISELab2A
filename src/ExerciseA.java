@@ -23,10 +23,14 @@ public class ExerciseA {
         Thread a = new MyThread("A");
         Thread b = new MyThread("B");
 
-        a.start();
+        a.start(); //schedules the program to run when possible
         b.start();
 
-        a.join();
+        System.out.println("test");
+
+        a.join(); //wait for the thread to finish
+        System.out.println("Thread A finished!");
         b.join();
+        System.out.println("All done!");
     }
 }
