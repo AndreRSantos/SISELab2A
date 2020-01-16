@@ -9,6 +9,13 @@ public class Store {
         synchronized(products[cod1]){
             synchronized(products[cod2]){
                 synchronized(products[cod3]){
+
+                    /*
+                    Have sequential "synchronized" his can cause deadlock:
+                    Deadlock occurs when a thread A is waiting for thread B
+                    and thread B is also waiting for thread A
+                     */
+
                     products[cod1].decrement();
                     products[cod2].decrement();
                     products[cod3].decrement();
