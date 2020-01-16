@@ -4,10 +4,10 @@ class Counter {
         cnt = init;
     }
     public void increment() {
-        cnt++;
+        cnt++; //CRITICAL SECTION
     }
     public void decrement() {
-        cnt--;
+        cnt--; //CRITICAL SECTION
     }
     public int value() {
         return cnt;
